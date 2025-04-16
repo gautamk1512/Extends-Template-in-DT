@@ -1,0 +1,38 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+{% block title %}Home - MySite{% endblock %}
+{% block content %}
+<!-- Carousel -->
+<div id="carouselExample" class="carousel slide mt-3" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://paruluniversity.ac.in/app/images/slider/background_image/786407Parul%20University%20Top%2050%20NIRF%20(1).jpg" class="d-block w-100" alt="...">
+    </div>
+    <!-- Repeat more carousel items as needed -->
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Cards -->
+<div class="container my-5">
+  <div class="row">
+    {% for i in "123" %}
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://paruluniversity.ac.in/app/images/slider/background_image/786407Parul%20University%20Top%2050%20NIRF%20(1).jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card {{ i }}</h5>
+          <p class="card-text">Some quick example text for card {{ i }}.</p>
+          <a href="#" class="btn btn-primary">Learn more</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
